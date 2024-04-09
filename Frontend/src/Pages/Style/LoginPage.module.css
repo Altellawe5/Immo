@@ -1,0 +1,63 @@
+.main {
+    background-image: url(https://images.pexels.com/photos/966397/pexels-photo-966397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vw;
+}
+
+.loginPage {
+    max-width: 400px;
+    margin: auto;
+    padding-top: 130px;
+
+}
+
+.loginPage h2 {
+    text-align: center;
+
+}
+
+.loginPage form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginPage form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.loginPage form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.loginPage form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.loginPage form div div {
+    color: red;
+}
+
+.loginPage button {
+    cursor: pointer;
+    background-color: #008cba;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.loginPage button:disabled {
+    background-color: #ccc;
+}
+
+.loginPage button:hover {
+    background-color: #0079a1;
+}

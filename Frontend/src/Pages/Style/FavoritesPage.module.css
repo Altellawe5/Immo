@@ -1,0 +1,34 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+
+.propertyContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.buttonRemove {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #FFF;
+    background-color: #d9534f;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.buttonRemove:hover {
+    background-color: darkred;
+}

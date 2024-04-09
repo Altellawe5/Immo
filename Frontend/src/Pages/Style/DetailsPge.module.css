@@ -1,0 +1,86 @@
+@import "../../index.css";
+
+.detailsPage {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 1000px;
+    margin: 2rem;
+}
+
+h3 {
+    color: var(--colorPrimary);
+}
+
+
+.imagesSection {
+    display: flex;
+    gap: 20px;
+    height: 300px;
+    width: 100%;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+.mainImage {
+    height: 300px;
+    width: 50%;
+}
+
+.mainPage img {
+    border-radius: 1rem;
+}
+
+.otherImages {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+.otherImages img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+
+}
+
+.infoSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    color: #333;
+}
+
+.infoSection h3 {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.infoSection .description {
+    grid-column: span 2;
+}
+
+.infoSection p {
+    margin: 0;
+}
+
+.infoTitle {
+    font-weight: bold;
+    color: var(--colorAccent);
+}
+
+.infoText {
+    color: #6c757d;
+}

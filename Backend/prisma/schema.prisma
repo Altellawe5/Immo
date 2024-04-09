@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Property {
+  id                Int              @id @default(autoincrement())
+  street            String           @db.VarChar(85)
+  houseNumber       String           @db.VarChar(45)
+  floor             String           @db.VarChar(45)
+  postalCode        String
+  commune           String           @db.VarChar(85)
+  city              String           @db.VarChar(45)
+  price             Int
+  bedrooms          Int
+  bathrooms         Int
+  surface           Int
+  description       String           @db.VarChar(1000)
+  buildingCondition String           @db.VarChar(250)
+  isSoldRent        Boolean
+  isForSell         Boolean
+  availableAt       String
+  constructionYear  Int
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+  typeProperty      TypeProperty     @relation(fields: [typePropertyId], references: [id])
+  typePropertyId    Int
+  propertyRegion    PropertyRegion[]
+  images            Image[]
+}
+
+model TypeProperty {
+  id         Int        @id @default(autoincrement())
+  name       String     @db.VarChar(45)
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  properties Property[]
+}
+
+model Region {
+  id             Int              @id @default(autoincrement())
+  name           String           @db.VarChar(45)
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  propertyRegion PropertyRegion[]
+}
+
+model PropertyRegion {
+  property   Property @relation(fields: [propertyId], references: [id])
+  propertyId Int
+  region     Region   @relation(fields: [regionId], references: [id])
+  regionId   Int
+  updatedAt  DateTime @updatedAt
+
+  @@unique([propertyId, regionId])
+}
+
+model Image {
+  id         Int       @id @default(autoincrement())
+  url        String    @db.VarChar(455)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  agent      Agent? // Optional: an image might not be associated with an agent
+  property   Property? @relation(fields: [propertyId], references: [id])
+  propertyId Int?
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  firstName String
+  lastName  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Agent {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  firstName   String
+  lastName    String
+  age         Int
+  phoneNumber Int
+  experince   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  image       Image?   @relation(fields: [imageId], references: [id])
+  imageId     Int?     @unique
+}

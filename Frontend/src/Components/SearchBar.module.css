@@ -1,0 +1,61 @@
+@import "../index.css";
+
+.searchBarProperties {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    top: 20%;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.searchBarHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.inputGroup {
+    flex-grow: 1;
+    margin-right: 1em;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button {
+    padding: 0.6em 1.5em;
+    margin: 0 0 -13px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

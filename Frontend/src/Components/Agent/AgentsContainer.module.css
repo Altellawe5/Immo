@@ -1,0 +1,26 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    background-image: url(https://images.pexels.com/photos/8292801/pexels-photo-8292801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
+.head {
+    padding-bottom: 2rem;
+    align-items: end !important;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--colorPrimary);
+
+}
+
+.agentsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 2rem;
+    max-width: 1000px;
+    padding: 2rem;
+    margin-top: 2rem;
+}

@@ -1,0 +1,77 @@
+@import '../../index.css';
+/* AddProperty.module.css */
+
+
+
+.addProperty {
+    width: 60%;
+    color: #100202;
+    margin: 2rem auto;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.addProperty h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #100000;
+}
+
+.addProperty form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.addProperty label {
+    color: var(--colorAccent);
+    margin-bottom: 0.5em;
+}
+
+.addProperty input,
+.addProperty select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: whitesmoke;
+    color: #130101;
+    width: 100%;
+}
+
+.addProperty button {
+    border: none;
+    border-radius: 5px;
+    padding: 1em 2em;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: span 2;
+    /* button will take full width */
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkboxLabel {
+    margin-right: 10px;
+    width: 75%;
+}
+
+.checkboxInput {
+    width: 25%;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.addProperty button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #FF4136;
+}
